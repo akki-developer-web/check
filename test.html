@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1 class="heading">
+        hello world
+    </h1>
+    <button class="btn">button</button>
+    <input type="text" id="input">
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn").click(function(){
+        let currentText = $(".heading").text(); // jo text abhi hai
+        if(currentText === "hello world"){
+            $(".heading").text("by");
+        } else {
+            $(".heading").text("hello world");
+        }
+    });
+    $("#input").keyup(function(){
+    alert("Key released!");
+});
+});
+
+
+</script>
+
+</body>
+</html>
